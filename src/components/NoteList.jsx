@@ -1,17 +1,21 @@
 import { useState } from "react";
 import NoteItem from "./NoteItem";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const NoteList = () => {
+  const navigate = useNavigate();
   const [notes, setNotes] = useState([]);
 
   const getNote = () => {
-    const transformNotes = notes.map((note) => {
-      return (
-        <NoteItem key={note.id} title={note.title} content={note.content} />
-      );
-    });
-    return transformNotes;
+    return notes.map((note) => (
+      <NoteItem
+        key={note.id}
+        id={note.id}
+        title={note.title}
+        content={note.content}
+        onNoteClick={(id) => navigate(`/edit/${id}`)}
+      />
+    ));
   };
 
   const addNewNote = () => {
@@ -24,8 +28,8 @@ const NoteList = () => {
   };
 
   return (
-    <div className="h-screen flex justify-center items-center bg-gray-900">
-      <div className="w-[300px] h-[500px] rounded-md p-5 bg-yellow-500 text-black">
+    <div className="min-h-screen flex justify-center items-start bg-gray-900 py-8">
+      <div className="bg-yellow-500 text-black p-5 md:rounded-md md:w-[400px] md:h-[500px] w-full h-screen">
         <h3 className="font-serif mb-2">NoteList</h3>
 
         <div className="flex items-center gap-2 mb-4">
@@ -41,6 +45,8 @@ const NoteList = () => {
             +
           </button>
         </div>
+
+        {/* 🗒 Scrollable notes area */}
         <div className="w-full h-[80%] overflow-y-scroll p-3 bg-gray-700 rounded">
           {getNote()}
         </div>

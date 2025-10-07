@@ -1,9 +1,16 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { ArrowLeft, Save, Trash2 } from "lucide-react";
 
 function NoteEditor() {
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
+
+  const navigate = useNavigate();
+
+  const handleBack = () => {
+    navigate(-1);
+  };
 
   const handleSave = () => {
     console.log("Saving note:", { title, content });
@@ -11,10 +18,6 @@ function NoteEditor() {
 
   const handleDelete = () => {
     console.log("Deleting note");
-  };
-
-  const handleBack = () => {
-    console.log("Going back");
   };
 
   return (
@@ -30,14 +33,14 @@ function NoteEditor() {
         <div className="flex gap-2">
           <button
             onClick={handleSave}
-            className="px-4 py-2 bg-blue-600 hover:bg-blue-700 rounded-lg transition-colors flex items-center gap-2"
+            className="px-4 py-2 bg-gray-600 hover:bg-gray-700 rounded-lg transition-colors flex items-center gap-2"
           >
             <Save size={16} />
             Save
           </button>
           <button
             onClick={handleDelete}
-            className="px-4 py-2 bg-red-600 hover:bg-red-700 rounded-lg transition-colors flex items-center gap-2"
+            className="px-4 py-2 bg-yellow-600 hover:bg-blue-700 rounded-lg transition-colors flex items-center gap-2"
           >
             <Trash2 size={16} />
             Delete

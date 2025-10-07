@@ -13,7 +13,7 @@ function App() {
           <Route path="/" element={<NoteList />} />
 
           {/* Page for editing a single note */}
-          <Route path="/edit:id" element={<NoteEditor />} />
+          <Route path="/edit/:id" element={<NoteEditor />} />
         </Routes>
       </main>
     </BrowserRouter>
