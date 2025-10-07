@@ -1,12 +1,71 @@
-# React + Vite
+# 🗒️ NoteList
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> A personal and minimalist note-taking web app built with **React** and **Tailwind CSS**.  
+> Originally created to collect quotes and thoughts from Pinterest ✨, now growing into an AI-powered personal notes vault.
 
-Currently, two official plugins are available:
+🌐 **Live Demo:** [https://reactnotelist.netlify.app/](https://reactnotelist.netlify.app/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+<img width="477" height="814" alt="image" src="https://github.com/user-attachments/assets/face2f9f-54aa-4511-a4f4-3ccde10b2d80" />
+<img width="480" height="829" alt="image" src="https://github.com/user-attachments/assets/5684b134-1404-4de6-9e6d-989df5167fff" />
+<img width="486" height="845" alt="image" src="https://github.com/user-attachments/assets/f66b1fd9-924d-44e1-bdfc-a0f03f95dbbe" />
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
+---
+
+## ✨ Features
+
+-  Create new notes instantly  
+-  Click any note to view or edit it  
+-  Save and delete options (to be connected to backend soon)  
+-  Search bar (coming soon – to filter through your notes easily)  
+-  Fully responsive, mobile-friendly design  
+- Clean, modern interface built with Tailwind CSS  
+
+---
+
+##  Upcoming Features — *“The AI Chapter”*
+
+>  *Drumroll... introducing intelligence into your notes!*
+
+-  **AI integration** — generate note summaries, quote interpretations, or mood insights  
+-  **Smart search** — semantic search powered by AI embeddings  
+-  **Cloud sync** — securely save your notes online  
+-  **Authentication** — sign in to access your personal notes across devices  
+
+---
+
+##  Tech Stack
+
+| Tool | Purpose |
+|------|----------|
+|  React | Frontend framework |
+| React Router | Page navigation |
+|  Tailwind CSS | Styling |
+|  Lucide Icons | Modern icons |
+|  Vite | Lightning-fast bundler |
+
+---
+
+##  Installation
+
+To run NoteList locally:
+
+```bash
+# Clone the repository
+git clone https://github.com/Sussana7/notelist.git
+
+# Move into the project directory
+cd notelist
+
+# Install dependencies
+npm install
+
+# Run the development server
+npm run dev
+👩🏽‍💻 Author
+
+Sussana Teye
+Computer Science student at the University of Cape Coast
+Passionate about Artificial Intelligence & Frontend Development
+Currently building personal AI-powered apps and learning edge AI technologies
